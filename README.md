@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+About:
 
-Things you may want to cover:
+Rails 7.0.2.3
 
-* Ruby version
+ruby 2.7.5p203
 
-* System dependencies
+Run:
 
-* Configuration
+rake db:migrate
 
-* Database creation
+To Start the application:
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+rails s
