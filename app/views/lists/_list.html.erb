@@ -1,0 +1,44 @@
+<div id="<%= dom_id list %>">
+ <table class="table table-bordered">
+ <% if list.completed %>
+
+ 
+
+ <tr class=table-secondary>
+  <td class="striker">
+   <a href="#">
+    <%= link_to list.description, list_path(list) %></a>
+  </td>
+  <td>
+     <center>
+  <%= form_for(list) do |f| %>
+  <%= f.text_field :description, type: 'hidden' %>
+    <%= f.check_box :completed, :checked =>false, style: "visibility: hidden;" %>  
+    <%= f.submit "Undo", class: 'btn btn-outline-secondary btn-sm' %>
+  <% end %>
+  </center>
+    <td><%= button_to "Delete", list, class: 'btn btn-outline-danger btn-sm', method: :delete, form: {data: {turbo_confirm: 'Are you sure?'}}%></td>
+  </tr>
+
+  <% else %>
+   <tr>
+  <td>
+    <%= link_to list.description, list_path(list) %>
+  <td>
+
+       <center>
+  <%= form_for(list) do |f| %>
+  <%= f.text_field :description, type: 'hidden' %>
+    <%= f.check_box :completed, :checked =>true, style: "visibility: hidden;" %>  
+    <%= f.submit "Done", class: 'btn btn-outline-secondary btn-sm' %>
+  <% end %>
+  </center>
+  </td>
+
+<td> <%= button_to "Delete", list, class: 'btn btn-outline-danger btn-sm', method: :delete, form: {data: {turbo_confirm: 'Are you sure?'}}%></td>
+  </tr>
+  <% end %>
+
+
+</div>
+  </table>

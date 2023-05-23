@@ -1,0 +1,15 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @list %>
+
+<br>
+
+<h2 class"comment"> <%= @list.comments.count %> Comments</h2>
+<%= render @list.comments %>
+     <h3>Add a Comment</h3>
+     <%= render 'comments/form' %>
+
+<div>
+  <%= link_to "Edit this list", edit_list_path(@list) %> |
+  <%= link_to "Back to lists", lists_path %>
+</div>

@@ -1,0 +1,6 @@
+<%= comment.name %> <br>
+<%= comment.body %> <br>
+<%= (comment.created_at).in_time_zone("Pacific Time (US & Canada)").strftime("%m/%d/%Y %I:%M %p") %> <br>
+<%= "Posted " + time_ago_in_words(comment.created_at) + " ago" %> <br>
+<br>
+<p> <%= link_to 'Delete', comments_path(comment.list, comment), method: :delete%> </p>

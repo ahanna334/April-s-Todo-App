@@ -1,0 +1,26 @@
+@import 'bootstrap';
+
+.striker {
+    text-decoration: line-through;
+}
+body {
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+table td {
+    width: 30%
+}
+
+a{text-decoration: none !important}
+a{color: black}
+a:hover{color: red}
+
+#flashmessage{
+color: green;
+background-color: #e0fae0;
+border-radius: 5px;
+max-width: 350px;
+text-align: center
+}
+h3{
+    margin-top: 5px;
+}
