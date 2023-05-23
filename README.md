@@ -11,5 +11,5 @@ rails s
 ![Image 1](1.png)
 
 
-![Image 12](1.png)
+![Image 12](2.png)
 
